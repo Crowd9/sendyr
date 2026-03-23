@@ -81,7 +81,7 @@ module Sendyr
 			end
 
 			unless [:complained, :unsubscribed].include?(status)
-				subscribe({email: email}.merge(opts)) == true
+				subscribe(**{email: email}.merge(opts)) == true
 			else
 				false
 			end
